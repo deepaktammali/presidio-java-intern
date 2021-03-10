@@ -5,4 +5,13 @@ public class PublicClass {
 	private double privateVar;
 	String defaultVar;
 	protected boolean protectedVar;
+	
+	public void getPublic() {
+		System.out.println("Public");
+	}
+	
+	void getDefault() {
+		System.out.println("default");
+	}
+	
 }

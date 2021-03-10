@@ -25,4 +25,32 @@
 23. 3) void amethod(long i){} 
 24. 3) System.out.println(Math.ceil(-4.7)); 
 25. 2) 19 followed by 11
+26. 2) ic
+27. 3) s.indexOf('v'); 
+28. 1) s3=s1 + s2; 
+29. 4) 7 
+30. 
+31. 
+32.
+33.
+34.
+35.4) Compile time error
+36.3) if(s.equalsIgnoreCase(s2)) 
+37.
+38.
+39.
+40.
+41.3) 10 and 40 
+42.4) for(int i=0; i< ia.length;i++) 
+43.3) 100 followed by 200
+44.1)12
+45.1) Error at compile time 
+46.
+47.
+48.
+49.3) A random number between 0 and 1 
+50.
+51.3) A compile time error 
+58.
+59.4) Output of "Over.amethod" 
 

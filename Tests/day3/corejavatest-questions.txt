@@ -258,6 +258,7 @@ public class MgAp extends Applet{
                 System.out.println(getParameter("age")); 
                 } 
 }
+
 Question 21)
 What will be output by the following code? 
 public class MyFor{
@@ -310,6 +311,7 @@ System.out.println(i + ten);
 2) 19 followed by 11 
 3) Error: Can't convert java lang Integer 
 4) 10 followed by 1 
+
 Question 26)
 If you run the code below, what gets printed out? 
 String s=new String("Bicycle"); 
@@ -320,6 +322,7 @@ System.out.println(s.substring(iBegin,iEnd));
 2) ic 
 3) icy 
 4) error: no method matching substring(int,char) 
+
 Question 27)
 If you wanted to find out where the position of the letter v (ie return 2) in the string s 
 containing "Java", which of the following could you use? 
@@ -336,7 +339,8 @@ Which of the following are legal operations?
 1) s3=s1 + s2; 
 2) s3=s1-s2; 
 3) s3=s1 & s2; 
-4) s3=s1 && s2 
+4) s3=s1 && s2
+ 
 Question 29)
 What is the result of the following operation? 
 System.out.println(4 | 3); 
@@ -344,6 +348,7 @@ System.out.println(4 | 3);
 2) 0 
 3) 1 
 4) 7 
+
 Question 30)
 public class MyClass1 {
 public static void main(String argv[]){ } 
@@ -412,6 +417,7 @@ EqTest(){
 2) if(s.equals(s2) 
 3) if(s.equalsIgnoreCase(s2)) 
 4)if(s.noCaseMatch(s2)) 
+
 Question 38)
 How can you change the current working directory using an instance of the File class called FileName? 
 1) FileName.chdir("DirName") 
@@ -504,6 +510,7 @@ public static void main(String argv[]){
 2) 200 
 3) 100 followed by 200 
 4) 100 
+
 Question 44)
 What will the following code print out? 
 public class Oct{
@@ -520,6 +527,7 @@ public static void main(String argv[]){
 2)012 
 3)10 
 4)10.0 
+
 Question 45
 What will happen when you try compiling and running this code? 
 public class Ref{
@@ -554,6 +562,7 @@ public static void main(String argv[]){
 2) A random number between 1 and 10 
 3) A random number between 0 and 1 
 4) A compile time error about random being an unrecognised method 
+
 Question 51)
 What will happen when you compile and run the following code? 
 public class Scope{
@@ -571,6 +580,8 @@ public static void main(String argv[]){
 3) A compile time error 
 4) A compile time error complaining of the scope of the variable i 
  
+
+
 Question 58)
 You have these files in the same directory. What will happen when you attempt to compile and run Class1.java if you have not already compiled Base.java 
 //Base.java
@@ -592,6 +603,8 @@ public static void main(String argv[]){
 2) Compile Error: Unable to access protected method in base class 
 3) Compilation followed by the output "amethod" 
 4)Compile error: Superclass Class1.Base of class Class1.Class1 not found 
+
+
 
 Question 59)
 What will happen when you attempt to compile and run the following code 
