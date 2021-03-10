@@ -192,6 +192,7 @@ int i=1;
 int j=2; 
 if(i==1 &| j==2) 
         System.out.println("OK");
+
 Question 15)
 What will be output if you try to compile and run the following code, but there is 
 no file called Hello.txt in the current directory?. 

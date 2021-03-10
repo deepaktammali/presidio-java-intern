@@ -15,3 +15,14 @@
 13. 2) default, zero 
 14. 2) and 3)
 15. 
+16. 4)
+17. 3) Runtime Exception 
+18. 
+19. 
+20. 
+21. 1) Value for i=1 Value for j=1 and 2)Value for i=2 Value for j=1
+22. 
+23. 3) void amethod(long i){} 
+24. 3) System.out.println(Math.ceil(-4.7)); 
+25. 2) 19 followed by 11
+
