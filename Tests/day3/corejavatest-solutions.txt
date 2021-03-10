@@ -1,0 +1,17 @@
+1. 5) int i =10;
+2. 1) error : Can't make static reference to void amethod. 
+3. 2)	package MyPackage; 
+	import java.awt.*; 
+	class MyClass{}
+4. 1) -128 to 127 
+5. 4) Exception raised: "java.lang.ArrayIndexOutOfBoundsException: 2" 
+6. if, goto, while, case
+7. options 2, 3, 4 and 5
+8. 4) 0
+9. 3) 2
+10. 3) 0
+11. 
+12. 3) one, two, default 
+13. 2) default, zero 
+14. 2) and 3)
+15. 

@@ -1,0 +1,616 @@
+Time: 1 Hour
+Question 1)
+Which of the following lines will compile without warning or error. 
+1) float f=1.3; 
+2) char c="a"; 
+3) byte b=257; 
+4) boolean b=null; 
+5) int i=10; 
+Question 2)
+What will happen if you try to compile and run the following code 
+public class MyClass { 
+        public static void main(String arguments[]) { 
+                amethod(arguments); 
+                } 
+        public void amethod(String[] arguments) { 
+                System.out.println(arguments); 
+                System.out.println(arguments[1]); 
+        } 
+}
+1) error Can't make static reference to void amethod. 
+2) error method main not correct 
+3) error array must include parameter 
+4) amethod must be declared with String 
+
+Question 3)
+Which of the following will compile without error 
+1) 
+import java.awt.*; 
+package Mypackage; 
+class Myclass {}
+2) 
+package MyPackage; 
+import java.awt.*; 
+class MyClass{}
+3) 
+/*This is a comment */ 
+package MyPackage; 
+import java.awt.*; 
+class MyClass{}
+
+Question 4)
+A byte can be of what size 
+1) -128 to 127 
+2) (-2 power 8 )-1 to 2 power 8 
+3) -255 to 256 
+4)depends on the particular implementation of the Java Virtual machine 
+
+Question 5)
+What will be printed out if this code is run with the following command line? 
+java myprog good morning
+public class myprog{ 
+public static void main(String argv[])
+{ 
+System.out.println(argv[2]) 
+}
+}
+1) myprog 
+2) good 
+3) morning 
+4) Exception raised: "java.lang.ArrayIndexOutOfBoundsException: 2" 
+ 
+Question 6)
+Which of the following are keywords or reserved words in Java? 
+1) if 
+2) then 
+3) goto 
+4) while 
+5) case 
+ 
+Question 7)
+Which of the following are legal identifiers 
+1) 2variable 
+2) variable2 
+3) _whatavariable 
+4) _3_ 
+5) $anothervar 
+6) #myvar 
+Question 8)
+What will happen when you compile and run the following code? 
+public class MyClass{ 
+        static int i; 
+        public static void main(String argv[]){ 
+                System.out.println(i); 
+                } 
+}
+1) Error Variable i may not have been initialized 
+2) null 
+3) 1 
+4) 0 
+ 
+Question 9)
+What will happen if you try to compile and run the following code? 
+public class Q { 
+        public static void main(String argv[]){ 
+                int anar[]=new int[]{1,2,3};
+                System.out.println(anar[1]); 
+                } 
+}
+1) 1 
+2) Error anar is referenced before it is initialized 
+3) 2 
+4) Error: size of array must be defined 
+
+Question 10)
+What will happen if you try to compile and run the following code? 
+public class Q { 
+        public static void main(String argv[]){ 
+                int anar[]=new int[5];
+                System.out.println(anar[0]); 
+                } 
+}
+1) Error: anar is referenced before it is initialized 
+2) null 
+3) 0 
+4) 5 
+ 
+Question 11)
+What will be the result of attempting to compile and run the following code? 
+abstract class MineBase { 
+        abstract void amethod(); 
+        static int i; 
+}
+public class Mine extends MineBase      { 
+        public static void main(String argv[]){ 
+                        int[] ar=new int[5]; 
+                        for(i=0;i < ar.length;i++) 
+                                System.out.println(ar[i]); 
+                        } 
+}
+1) a sequence of 5 0's will be printed 
+2) Error: ar is used before it is initialized 
+3) Error Mine must be declared abstract 
+4) IndexOutOfBoundes Error 
+Question 12)
+What will be printed out if you attempt to compile and run the following code ? 
+int i=1; 
+        switch (i) { 
+                case 0: 
+                System.out.println("zero"); 
+        break; 
+        case 1: 
+                System.out.println("one"); 
+        case 2: 
+                System.out.println("two"); 
+        default: 
+                System.out.println("default"); 
+        }
+1) one 
+2) one, default 
+3) one, two, default 
+4) default 
+
+Question 13)
+What will be printed out if you attempt to compile and run the following code? 
+int i=9; 
+switch (i) { 
+        default: 
+        System.out.println("default"); 
+                case 0: 
+        System.out.println("zero"); 
+                break; 
+        case 1: 
+                System.out.println("one"); 
+        case 2: 
+        System.out.println("two"); 
+}
+1) default 
+2) default, zero 
+3) error default clause not defined 
+4) no output displayed 
+
+Question 14)
+Which of the following lines of code will compile without error 
+1) 
+int i=0; 
+if(i) { 
+        System.out.println("Hello"); 
+        }
+2) 
+boolean b=true; 
+boolean b2=true; 
+if(b==b2) { 
+        System.out.println("So true"); 
+        }
+3) 
+int i=1; 
+int j=2; 
+if(i==1|| j==2) 
+        System.out.println("OK");
+4) 
+int i=1; 
+int j=2; 
+if(i==1 &| j==2) 
+        System.out.println("OK");
+Question 15)
+What will be output if you try to compile and run the following code, but there is 
+no file called Hello.txt in the current directory?. 
+import java.io.*; 
+public class Mine { 
+        public static void main(String argv[]){
+        Mine m=new Mine(); 
+        System.out.println(m.amethod()); 
+}
+public int amethod() { 
+        try {
+                FileInputStream dis=new FileInputStream("Hello.txt"); 
+                }catch (FileNotFoundException fne) { 
+                        System.out.println("No such file found"); 
+                        return -1; 
+                        }catch(IOException ioe) { 
+                        } finally{ 
+        System.out.println("Doing finally"); 
+        } 
+        return 0; 
+        } 
+}
+1) No such file found 
+2 No such file found ,-1 
+3) No such file found, Doing finally, -1 
+4) 0 
+ 
+Question 16)
+Which of the following statements are true? 
+1) Methods cannot be overriden to be more private
+2) Static methods cannot be overloaded
+3) Private methods cannot be overloaded
+4) An overloaded method cannot throw exceptions not checked in the base class
+ 
+Question 17)
+What will happen if you attempt to compile and run the following code? 
+1) Compile and run without error 
+2) Compile time Exception 
+3) Runtime Exception 
+class Base {} 
+class Sub extends Base {} 
+class Sub2 extends Base {}
+public class CEx{
+        public static void main(String argv[]){
+                Base b=new Base();
+                Sub s=(Sub) b;
+                }
+}
+ 
+Question 18)
+If the following HTML code is used to display the applet in the code MgAp what will 
+be displayed at the console? 
+1) Error: no such parameter 
+2) 0 
+3) null 
+4) 30 
+<applet name=MgAp code=MgAp.class height=400 width=400 parameter HowOld=30 > 
+</applet> 
+import java.applet.*; 
+import java.awt.*; 
+public class MgAp extends Applet{
+        public void init(){ 
+                System.out.println(getParameter("age")); 
+                } 
+}
+Question 21)
+What will be output by the following code? 
+public class MyFor{
+public static void main(String argv[]){ 
+    int i; 
+    int j; 
+    outer: 
+    for (i=1;i <3;i++) 
+        inner: 
+         for(j=1; j<3; j++) { 
+                    if (j==2) 
+                    continue outer; 
+                    System.out.println("Value for i=" + i + " Value for j=" +j); 
+                    } 
+        } 
+}
+1) Value for i=1 value for j=1 
+2) Value for i=2 value for j=1 
+3) Value for i=2 value for j=2 
+4) Value for i=3 value for j=1 
+ 
+Question 23)
+Which of the following methods can be legally inserted in place of the comment //Method Here ? 
+class Base{ 
+      public void amethod(int i) {  }
+} 
+public class Scope extends Base{
+        public static void main(String argv[]){
+        } 
+    //Method Here
+}
+1) void amethod(int i) throws Exception {} 
+2) void amethod(long i)throws Exception {} 
+3) void amethod(long i){} 
+4) public void amethod(int i) throws Exception {} 
+Question 24)
+Which of the following will output -4.0 
+1) System.out.println(Math.floor(-4.7)); 
+2) System.out.println(Math.round(-4.7)); 
+3) System.out.println(Math.ceil(-4.7)); 
+4) System.out.println(Math.min(-4.7)); 
+Question 25)
+What will happen if you attempt to compile and run the following code? 
+Integer ten=new Integer(10); 
+Long nine=new Long (9);
+System.out.println(ten + nine); 
+int i=1;
+System.out.println(i + ten);
+1) 19 followed by 20 
+2) 19 followed by 11 
+3) Error: Can't convert java lang Integer 
+4) 10 followed by 1 
+Question 26)
+If you run the code below, what gets printed out? 
+String s=new String("Bicycle"); 
+int iBegin=1; 
+char iEnd=3; 
+System.out.println(s.substring(iBegin,iEnd));
+1) Bic 
+2) ic 
+3) icy 
+4) error: no method matching substring(int,char) 
+Question 27)
+If you wanted to find out where the position of the letter v (ie return 2) in the string s 
+containing "Java", which of the following could you use? 
+1) mid(2,s); 
+2) charAt(2); 
+3) s.indexOf('v'); 
+4) indexOf(s,'v'); 
+Question 28)
+Given the following declarations 
+String s1=new String("Hello") 
+String s2=new String("there"); 
+String s3=new String();
+Which of the following are legal operations? 
+1) s3=s1 + s2; 
+2) s3=s1-s2; 
+3) s3=s1 & s2; 
+4) s3=s1 && s2 
+Question 29)
+What is the result of the following operation? 
+System.out.println(4 | 3); 
+1) 6 
+2) 0 
+3) 1 
+4) 7 
+Question 30)
+public class MyClass1 {
+public static void main(String argv[]){ } 
+/*Modifier at XX */ class MyInner {}
+}
+What modifiers would be legal at XX in the above code? 
+1) public 
+2) private 
+3) static 
+4) friend 
+Question 33)
+What will happen when you attempt to compile and run the following code?. 
+1) It will compile and the run method will print out the increasing value of i. 
+2) It will compile and calling start will print out the increasing value of i. 
+3) The code will cause an error at compile time. 
+4) Compilation will cause an error because while cannot take a parameter of true. 
+class Background implements Runnable{ 
+  int i=0; 
+  public int run(){ 
+         while(true){ 
+                i++; 
+                System.out.println("i="+i); 
+            } //End while
+     return 1;
+     }//End run 
+}//End class
+Question 35)
+What will be the result when you attempt to compile and run the following code?. 
+public class Conv{
+    public static void main(String argv[]){ 
+        Conv c=new Conv(); 
+        String s=new String("ello"); 
+        c.amethod(s); 
+    } 
+public void amethod(String s){ 
+    char c='H'; 
+    c+=s; 
+    System.out.println(c); 
+    } 
+}
+1) Compilation and output the string "Hello" 
+2) Compilation and output the string "ello" 
+3) Compilation and output the string elloH 
+4) Compile time error 
+Question 36)
+Given the following code, what test would you need to put in place of the comment line? 
+//place test here 
+to result in an output of 
+Equal
+public class EqTest{ 
+    public static void main(String argv[]){ 
+    EqTest e=new EqTest(); 
+    }
+EqTest(){ 
+    String s="Java"; 
+    String s2="java"; 
+    //place test here {
+        System.out.println("Equal"); 
+        }else 
+        { 
+        System.out.println("Not equal"); 
+        }
+     } 
+}
+1) if(s==s2) 
+2) if(s.equals(s2) 
+3) if(s.equalsIgnoreCase(s2)) 
+4)if(s.noCaseMatch(s2)) 
+Question 38)
+How can you change the current working directory using an instance of the File class called FileName? 
+1) FileName.chdir("DirName") 
+2) FileName.cd("DirName") 
+3) FileName.cwd("DirName") 
+4) The File class does not support directly changing the current directory. 
+Question 40)
+Given the following code how could you invoke the Base constructor that will print out the string "base constructor"; 
+class Base{
+        Base(int i){
+        System.out.println("base constructor");
+        }
+        Base(){
+        }
+}
+public class Sup extends Base{
+        public static void main(String argv[]){
+             Sup s= new Sup();
+        //One
+        }
+        Sup()
+        {
+            //Two
+        }
+        public void derived()
+        {
+            //Three
+        }
+}
+1) On the line After //One put Base(10); 
+2) On the line After //One put super(10); 
+3) On the line After //Two put super(10); 
+4) On the line After //Three put super(10); 
+Question 41)
+Given the following code what will be output? 
+public class Pass{
+static int j=20;
+public static void main(String argv[]){
+        int i=10;
+        Pass p = new Pass();
+        p.amethod(i);
+        System.out.println(i);
+        System.out.println(j);
+        }
+        public void amethod(int x){
+        x=x*2;
+        j=j*2;
+        }
+}
+1) Error: amethod parameter does not match variable 
+2) 20 and 40 
+3) 10 and 40 
+4) 10, and 20 
+Question 42)
+What code placed after the comment //For loop would populate the elements of the array ia[] with values of the variable i.? 
+public class Lin{
+public static void main(String argv[]){
+        Lin l = new Lin();
+        l.amethod(); 
+        }
+        public void amethod(){
+        int ia[] = new int[4];
+                        //Start For loop        
+                        {
+           ia[i]=i;
+           System.out.println(ia[i]);
+           }
+        }
+}
+1) for(int i=0; i < ia.length() -1; i++) 
+2) for (int i=0; i< ia.length(); i++) 
+3) for(int i=1; i < 4; i++) 
+4) for(int i=0; i< ia.length;i++) 
+Question 43)
+What will be the result when you try to compile and run the following code? 
+private class Base{
+Base(){
+     int i = 100;     
+     System.out.println(i);
+     }
+}
+public class Pri extends Base{
+static int i = 200;
+public static void main(String argv[]){
+        Pri p = new Pri();
+        System.out.println(i);
+        }
+}
+1) Error at compile time 
+2) 200 
+3) 100 followed by 200 
+4) 100 
+Question 44)
+What will the following code print out? 
+public class Oct{
+public static void main(String argv[]){
+        Oct o = new Oct();
+        o.amethod();
+        }
+        public void amethod(){
+        int oi= 012;
+        System.out.println(oi);
+        }
+}
+1)12 
+2)012 
+3)10 
+4)10.0 
+Question 45
+What will happen when you try compiling and running this code? 
+public class Ref{
+public static void main(String argv[]){
+          Ref r = new Ref();
+          r.amethod(r);
+          }
+          public void amethod(Ref r){
+          int i=99;
+          multi(r);
+          System.out.println(i);
+          }
+          public void multi(Ref r){
+          r.i = r.i*2;
+          }
+}
+1) Error at compile time 
+2) An output of 99 
+3) An output of 198 
+4) An error at runtime 
+ 
+Question 49)
+What will be the result when you attempt to compile this program? 
+public class Rand{
+public static void main(String argv[]){
+        int iRand;
+        iRand = Math.random();
+        System.out.println(iRand);
+        }
+}
+1) Compile time error referring to a cast problem 
+2) A random number between 1 and 10 
+3) A random number between 0 and 1 
+4) A compile time error about random being an unrecognised method 
+Question 51)
+What will happen when you compile and run the following code? 
+public class Scope{
+private int i;
+public static void main(String argv[]){
+                Scope s = new Scope();
+            s.amethod();
+        }//End of main
+        public static void amethod(){
+                 System.out.println(i);
+        }//end of amethod
+}//End of class
+1) A value of 0 will be printed out 
+2) Nothing will be printed out 
+3) A compile time error 
+4) A compile time error complaining of the scope of the variable i 
+ 
+Question 58)
+You have these files in the same directory. What will happen when you attempt to compile and run Class1.java if you have not already compiled Base.java 
+//Base.java
+package Base;
+class Base{
+        protected void amethod(){
+                System.out.println("amethod");
+        }//End of amethod
+}//End of class base
+package Class1;
+//Class1.java
+public class Class1 extends Base{
+public static void main(String argv[]){
+                Base b = new Base();
+                b.amethod();
+               }//End of main
+}//End of Class1
+1) Compile Error: Methods in Base not found 
+2) Compile Error: Unable to access protected method in base class 
+3) Compilation followed by the output "amethod" 
+4)Compile error: Superclass Class1.Base of class Class1.Class1 not found 
+
+Question 59)
+What will happen when you attempt to compile and run the following code 
+class Base{
+private void amethod(int iBase){
+        System.out.println("Base.amethod");
+        }
+}
+class Over extends Base{
+public static void main(String argv[]){
+        Over o = new Over();
+        int iBase=0;
+        o.amethod(iBase);
+        }
+        public void amethod(int iOver){
+                System.out.println("Over.amethod");
+        }
+}
+1) Compile time error complaining that Base.amethod is private 
+2) Runtime error complaining that Base.amethod is private 
+3) Output of "Base.amethod"
+4) Output of "Over.amethod" 
+ 
