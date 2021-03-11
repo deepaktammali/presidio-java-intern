@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"day4","l":"JavaDocQ14"}];updateSearchResults();
