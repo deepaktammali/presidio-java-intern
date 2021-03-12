@@ -45,7 +45,7 @@ public class Main {
 		RectangularArray.printArray(arr11,"wedge");
 		
 		//12 the main program itself
-//		System.out.println(args[0]);
+//		System.out.println(args);
 		
 		//q13
 		
