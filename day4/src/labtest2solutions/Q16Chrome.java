@@ -11,14 +11,12 @@ public class Q16Chrome {
 
 class X {
 	void do1() {
-	}
-
-	public void do2() {
-
-	}
+	
+	}	
 }
 
 class Y extends X {
-	public void do2() {
+	void do2() {
+	System.out.println("Child");
 	}
 }
