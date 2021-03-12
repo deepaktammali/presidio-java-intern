@@ -5,6 +5,9 @@ public class QuadraticEquationQ24 {
 	private double b;
 	private double c;
 	
+	public QuadraticEquationQ24() {
+		this(1, 1, 1);
+	}
 	
 	public QuadraticEquationQ24(double a, double b, double c) {
 		this.a = a;
@@ -16,6 +19,11 @@ public class QuadraticEquationQ24 {
 		return (a*Math.pow(x, 2)+b*x+c);
 	}
 	
+	public void setAllParams(int a,int b,int c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 	
 	public double getA() {
 		return a;
