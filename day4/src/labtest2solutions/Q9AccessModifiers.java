@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class AccessModifiersQ9 {
+public class Q9AccessModifiers {
 	public static void Main(String[] args) {
 		
 	}

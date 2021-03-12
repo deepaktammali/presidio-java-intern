@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class ObjectStateChangeQ7 {
+public class Q7ObjectStateChange {
 	public static void main(String[] args) {
 		final Car teslaCar = new Car("Model Y");
 		System.out.println("The car model is "+teslaCar.modelName);

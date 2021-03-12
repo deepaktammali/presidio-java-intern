@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class ChromeQ16 {
+public class Q16Chrome {
 	public static void main(String [] args) {  
 		X x1 = new X(); 
 		X x2 = new Y(); 

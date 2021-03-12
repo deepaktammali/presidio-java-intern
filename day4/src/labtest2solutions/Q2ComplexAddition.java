@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class ComplexAdditionQ2 {
+public class Q2ComplexAddition {
 	public static void main(String[] args) {
 		ComplexNumber cp1 = new ComplexNumber(2,3);
 		ComplexNumber cp2 = new ComplexNumber(4,2);

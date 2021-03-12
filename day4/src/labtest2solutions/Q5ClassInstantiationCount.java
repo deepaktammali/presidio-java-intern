@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class ClassInstantiationCountQ5 {
+public class Q5ClassInstantiationCount {
 	public static void main(String[] args) {
 		Room room1 = new Room();
 		Room.printNumInstantiations();

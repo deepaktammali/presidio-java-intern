@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class SingletonClassQ8 {
+public class Q8SingletonClass {
 	public static void main(String[] args) {
 		Database db1 = Database.getDatabaseInstance();
 		Database db2 = Database.getDatabaseInstance();

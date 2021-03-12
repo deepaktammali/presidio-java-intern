@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class InheritanceQ10 {
+public class Q10Inheritance {
 	public static void main(String[] args) {
 		C cClass = new C();
 	}

@@ -2,7 +2,7 @@ package labtest2solutions;
 
 import java.util.Scanner;
 
-public class IntegerStackQ4 {
+public class Q4IntegerStack {
 	
 	public static void main(String[] args) {
 		Scanner sc         = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class StaticInitOrderQ6 {
+public class Q6StaticInitOrder {
 	public static void main(String[] args) {
 		StaticInitOrder staticInitOrder1 = new StaticInitOrder(2);
 		StaticInitOrder staticInitOrder2 = new StaticInitOrder(4);

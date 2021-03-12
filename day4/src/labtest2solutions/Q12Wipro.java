@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class WiproQ12 {
+public class Q12Wipro {
 	public static void main(String[] args) {
 		Wipro[] wiproCompanies = {new WiproConsumerCare(),new WiproInfrastructure(), new WiproHealthCare()};
 		

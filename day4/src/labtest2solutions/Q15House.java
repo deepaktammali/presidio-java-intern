@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class HouseQ15 {
+public class Q15House {
 	public static void main(String[] args) {
 		Door myDoor = new Door();
 		Window myWindow = new Window();

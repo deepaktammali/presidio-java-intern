@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class PayRollQ3 {
+public class Q3PayRoll {
 
 }
 

@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class InheritanceQ11 {
+public class Q11Inheritance {
 	public static void main(String[] args) {
 		CNew cClass = new CNew(1,2);
 	}

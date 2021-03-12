@@ -1,6 +1,6 @@
 package labtest2solutions;
 
-public class StudentQ14 {
+public class Q14Student {
 	public static void main(String[] args) {
 		Result studentResult = new Result(99,90,90,"john doe",1);
 		studentResult.calculateTotalMark();
