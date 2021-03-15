@@ -1,5 +1,7 @@
 package lab6;
-import account.*;
+
+import lab6.account.*;
+import java.util.Scanner;
 
 public class Q52{
 	public static void main(String[] args){
@@ -11,7 +13,7 @@ public class Q52{
 			System.out.printf("Enter account name :");
 			String name = scanner.next();
 			System.out.printf("Enter account number :");
-			int number = scanner.next();
+			int number = scanner.nextInt();
 			accountArray[i] = new Account(name,number);
 		}
 

@@ -1,8 +1,10 @@
+package lab2;
+
 public class Q23{
 	private static double pi = 3.141;
 
 	public static double calculateArea(double radius,double height){
-		double area = pi*Math.pow(r,2) + 2*pi*r*h;
+		double area = pi*Math.pow(radius,2) + 2*pi*radius*height;
 		return area;
 	}
 
@@ -12,7 +14,7 @@ public class Q23{
 	}
 
 	public static void main(String[] args){
-		double radius = 2,1;
+		double radius = 2.1;
 		double height = 5.4;
 		double area = calculateArea(radius,height);
 

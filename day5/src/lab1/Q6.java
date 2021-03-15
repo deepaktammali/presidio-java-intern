@@ -1,3 +1,7 @@
+package lab1;
+
+import java.util.Scanner;
+
 public class Q6{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
@@ -12,12 +16,13 @@ public class Q6{
 class User{
 	private String userName;
 	private String password=null;
-	Password(String userName,String password){
+	
+	User(String userName,String password){
 		this.userName = userName;
 		this.password = password;
 	}
 
-	Password(String userName){
+	User(String userName){
 		this.userName = userName;
 	}
 

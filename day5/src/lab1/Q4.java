@@ -1,3 +1,6 @@
+package lab1;
+import java.util.Scanner;
+
 public class Q4{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
@@ -28,7 +31,7 @@ public class Q4{
 				otherCount += 1;
 			}
 		}
-		System.out.println(digitCount,letterCount,spaceCount,otherCount);
+		System.out.printf("%d %d %d %d",digitCount,letterCount,spaceCount,otherCount);
 	}
 
 	}

@@ -1,3 +1,5 @@
+package lab6;
+
 public class Q50{
 	public static void main(String[] args){
 
@@ -25,18 +27,10 @@ class Car extends Vehicle{
 	}
 }
 
-class Aeroplane extends Vehicle{
-	protected string brand;
-	//aeroplane related stuff
-	Aerolane(String brand){
-		super("Air");
-		this.brand = brand;
-	}
-}
-
 //multi level inheritance
 
 class Tesla extends Car{
+	private String model;
 	Tesla(){
 		super("Tesla","Electric");
 		this.model = "x";

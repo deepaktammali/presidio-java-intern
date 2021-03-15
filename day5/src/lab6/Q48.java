@@ -1,11 +1,12 @@
+package lab6;
+
 public class Q48{
 	public static void main(String[] args){
-		Add add = new Add();
-		add(1);
+		Add add = new Add(1);
 		System.out.println(add.result);
-		add(2,3);
+		add = new Add(2,3);
 		System.out.println(add.result);
-		add(4,5,6);
+		add = new Add(4,5,6);
 		System.out.println(add.result);
 	}
 }
@@ -13,6 +14,7 @@ public class Q48{
 
 class Add{
 	int result;
+	
 	Add(int a){
 		this(a,0);
 	}

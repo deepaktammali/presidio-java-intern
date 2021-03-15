@@ -1,3 +1,5 @@
+package lab6;
+
 public class Q47{
 	
 	public static int add(int a){
