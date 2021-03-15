@@ -1,0 +1,5 @@
+13. goto and const
+14. byte and import
+20. all the options are valid (a,b,c and d)
+21. c=true,d=false,e=true,f=true,g=false
+22. b. 20
