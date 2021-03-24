@@ -1,7 +1,7 @@
 package concepts;
 
 public class BuilderPatternDemo {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		Computer myComputer;
 		
 		myComputer = new ComputerBuilder(64, 2000).build();
@@ -9,6 +9,12 @@ public class BuilderPatternDemo {
 		
 		myComputer = new ComputerBuilder(128, 2000).setMonitor("Dell").setMotherBoard("AMD").setOperatingSystem("Windows").build();
 		System.out.println(myComputer);
+		
+		Computer clonedComputer;
+		clonedComputer = myComputer.clone();
+		System.out.println(clonedComputer.toString());
+		
+		
 	}
 }
 
@@ -76,12 +82,13 @@ class ComputerBuilder {
 
 }
 
-class Computer {
+class Computer implements Cloneable{
 	private int ram;
 	private int diskSpace;
 	private String operatingSystem;
 	private String motherBoard;
 	private String monitor;
+
 
 	public Computer(ComputerBuilder builder) {
 		super();
@@ -92,6 +99,10 @@ class Computer {
 		this.monitor = builder.getMonitor();
 	}
 	
+	public Computer clone() throws CloneNotSupportedException {
+		return (Computer)super.clone();
+	}
+
 	public String toString() {
 		return ("Ram :"+ram+" Disk : "+diskSpace+" OS : "+operatingSystem+" MotherBoard : "+motherBoard+" Monitor: "+monitor);
 	}
