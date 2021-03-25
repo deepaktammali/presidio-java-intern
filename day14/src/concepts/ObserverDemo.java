@@ -6,6 +6,7 @@ import java.util.Vector;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ForkJoinTask;
 
 public class ObserverDemo {
 	public static void main(String[] args) {
@@ -23,9 +24,11 @@ interface ThreadedObserver{
 abstract class ThreadedObservable{
 
 	private Vector<ThreadedObserver> observers;
+	private boolean changed;
 
 	public ThreadedObservable() {
 		observers = new Vector<ThreadedObserver>();
+		changed=false;
 	}
 	
 	public synchronized void deleteObserver(ThreadedObserver o) {
@@ -37,19 +40,32 @@ abstract class ThreadedObservable{
 	public synchronized void addObserver(ThreadedObserver o) {
 		observers.add(o);
 	}
+	
+	public void setChanged() {
+		this.changed = true;
+	}
+	
+	public void clearChanged() {
+		this.changed=false;
+	}
 
 	public void notifyObservers(Object arg) {
 		
 		synchronized(this) {
-			
+			if(changed==false) {
+				return ;
+			}
 		}
 		
-		ExecutorService cachedPool = Executors.newCachedThreadPool();
+		ExecutorService fixedThreadPool = Executors.newFixedThreadPool(4);
+
 		observers.forEach((o) -> {
-			cachedPool.submit((Runnable) () -> {
+			fixedThreadPool.submit((Runnable) () -> {
 				o.update(this,(Object)arg);
 			});
 		});
+		
+		clearChanged();
 	}
 }
 
@@ -57,6 +73,7 @@ abstract class ThreadedObservable{
 
 class FireAlarm extends ThreadedObservable {
 	public void setFire() {
+		setChanged();
 		notifyObservers("fire in the mountain run run run..............");// signal is sent
 	}
 }
