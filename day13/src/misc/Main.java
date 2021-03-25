@@ -21,12 +21,7 @@ class CustomElement{
 		super();
 		this.num = num;
 	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
-	}
-	
+
 	@Override
 	public int hashCode() {
 		return 1;
