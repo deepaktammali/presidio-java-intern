@@ -1,12 +1,9 @@
 package concepts;
 
-import java.util.Observable;
-import java.util.Observer;
 import java.util.Vector;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinTask;
+
 
 public class ObserverDemo {
 	public static void main(String[] args) {
