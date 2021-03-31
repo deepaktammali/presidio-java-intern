@@ -1,0 +1,12 @@
+<class>
+	<student rollno="1">
+		<firstname>Tammali</firstname>
+		<lastname>Deepak</lastname>
+		<nickname>deep</nickname>
+	</student>
+	<student rollno="2">
+		<firstname>Tammali</firstname>
+		<lastname>Kavya</lastname>
+		<nickname>kav</nickname>
+	</student>
+</class>
