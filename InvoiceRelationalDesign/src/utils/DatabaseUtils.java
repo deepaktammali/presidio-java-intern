@@ -1,4 +1,5 @@
-package jdbcdemo;
+package utils;
+
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -45,6 +46,12 @@ public class DatabaseUtils {
 			}
 		}
 
+//		Connection databaseConnection = databaseConnectionLocal.get();
+//		
+//		if(databaseConnection.isClosed()) {
+//			
+//		}
+//		
 		return databaseConnectionLocal.get();
 	}
 
@@ -69,20 +76,7 @@ public class DatabaseUtils {
 			e1.printStackTrace();
 		}
 		
-//		Logicial Error in following
-//		if (databaseConnection != null) {
-//			if (e != null) {
-//				databaseConnection.commit();
-//				databaseConnection.close();
-//			} else {
-//				if (sp != null) {
-//					databaseConnection.rollback(sp);
-//					databaseConnection.commit();
-//					databaseConnection.close();
-//				}
-//			}
-//		}
-		
+		databaseConnectionLocal.remove();
 		
 	}
 
