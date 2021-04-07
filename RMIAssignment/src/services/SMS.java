@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -13,7 +12,7 @@ import com.twilio.type.PhoneNumber;
 import services.remoteinterfaces.SMSService;
 
 public class SMS implements SMSService{
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		try(
 				FileInputStream smsEnvFileInputStream = new FileInputStream("smsenv.properties");

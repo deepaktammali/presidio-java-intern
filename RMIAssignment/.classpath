@@ -6,8 +6,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="B:/Java 3rd Party Libraries/jakarta.mail-1.6.6.jar"/>
-	<classpathentry kind="lib" path="B:/Java 3rd Party Libraries/activation.jar"/>
-	<classpathentry kind="lib" path="B:/Java 3rd Party Libraries/twilio-8.9.0-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VC/Desktop/Presidio_Intern/ThirdPartyLibraries/twilio-8.9.0-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VC/Desktop/Presidio_Intern/ThirdPartyLibraries/jakarta.mail-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VC/Desktop/Presidio_Intern/ThirdPartyLibraries/javax.activation.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
