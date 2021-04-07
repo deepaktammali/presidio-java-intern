@@ -1,11 +1,11 @@
-package datamodel;
+package utils.database;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
 
-import datamodel.baseclass.UserModel;
 import utils.DatabaseUtils;
+import utils.database.baseclass.UserModel;
 
 public class User extends UserModel {
 
@@ -139,8 +139,10 @@ public class User extends UserModel {
 		int i = 0;
 		Connection databaseConnection = DatabaseUtils.getDatabaseConnection();
 		try (Statement dbStatement = databaseConnection.createStatement();) {
-			i = dbStatement.executeUpdate("UPDATE users" + "SET username=" + user.getUsername() + ",password="
-					+ user.getPassword() + ",flag=" + user.getFlag() + "" + "WHERE id=" + user.getId() + ";");
+			System.out.println("UPDATE users" + " SET username='" + user.getUsername() + "',password='"
+					+ user.getPassword() + "',flag='" + user.getFlag() + "'" + " WHERE id=" + user.getId() + ";");
+			i = dbStatement.executeUpdate("UPDATE users" + " SET username='" + user.getUsername() + "',password='"
+					+ user.getPassword() + "',flag='" + user.getFlag() + "'" + " WHERE id=" + user.getId() + ";");
 			DatabaseUtils.close();
 		} catch (SQLException e) {
 			DatabaseUtils.close(e);
@@ -188,11 +190,11 @@ public class User extends UserModel {
 		}
 	};
 	
-	public static void main(String[] args) {
-		User user = new User("deepak", "password", "0");
-		User.insertUser(user);
-		System.out.println(User.findByID(1));
-		System.out.println(User.findByUsername("deepak")==null);
-	}
+//	public static void main(String[] args) {
+//		User user = new User("deepak", "password", "0");
+//		User.insertUser(user);
+//		System.out.println(User.findByID(1));
+//		System.out.println(User.findByUsername("deepak")==null);
+//	}
 
 }
