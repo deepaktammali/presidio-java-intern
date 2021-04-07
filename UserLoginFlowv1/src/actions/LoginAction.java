@@ -17,9 +17,12 @@ public class LoginAction implements Action {
 		UserModel queryUser = User.findByUsername(username);
 		try {
 			if(queryUser!=null) {
-				queryUser.setFlag("1");
-				User.updateUser(queryUser);
-				res.sendRedirect("home.html");
+				if(queryUser.getPassword()==password) {
+					queryUser.setFlag("1");
+					User.updateUser(queryUser);
+					res.sendRedirect("home.html");
+				}
+					res.sendRedirect("register.html");
 			}
 			else {
 				res.sendRedirect("register.html");
