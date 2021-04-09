@@ -1,4 +1,4 @@
-package datamodel;
+package utils.database;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,9 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import datamodel.baseclass.CustomerDataModel;
-import datamodel.baseclass.ItemDataModel;
 import utils.DatabaseUtils;
+import utils.database.baseclass.ItemDataModel;
 
 public class Item extends ItemDataModel {
 
