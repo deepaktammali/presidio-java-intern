@@ -17,7 +17,7 @@ public class AddToCartAction implements Action {
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
 			if(!AuthHelper.isUserAuthenticated(req)) {
-				res.sendRedirect(req.getContextPath()+"/login");
+				res.sendRedirect(req.getContextPath()+"/login.jsp");
 			}
 		
 			HttpSession userSession = req.getSession();

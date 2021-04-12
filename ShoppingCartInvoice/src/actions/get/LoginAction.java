@@ -10,7 +10,7 @@ public class LoginAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		res.sendRedirect(req.getContextPath()+"/login.html");
+		res.sendRedirect(req.getContextPath()+"/login.jsp");
 	}
 
 }

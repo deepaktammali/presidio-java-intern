@@ -21,7 +21,7 @@ public class LogoutAction implements Action {
 			res.sendRedirect(req.getContextPath()+"/index.jsp");
 		}
 		else {
-			res.sendRedirect(req.getContextPath() + "/login.html");
+			res.sendRedirect(req.getContextPath() + "/login.jsp");
 		}
 	}
 

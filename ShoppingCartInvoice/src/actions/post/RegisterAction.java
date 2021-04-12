@@ -21,7 +21,7 @@ public class RegisterAction implements Action {
 				UserModel newUser = new User(username,password,"0");
 				User.insertUser(newUser);
 			}
-			res.sendRedirect(req.getContextPath()+"/login.html");
+			res.sendRedirect(req.getContextPath()+"/login.jsp");
 	}
 
 }

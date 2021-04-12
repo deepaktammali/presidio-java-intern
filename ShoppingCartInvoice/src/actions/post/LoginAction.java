@@ -27,7 +27,7 @@ public class LoginAction implements Action {
 				userSession.setAttribute("currUser", queryUser);
 				res.sendRedirect(req.getContextPath()+"/index.jsp");
 			} else {
-				res.sendRedirect(req.getContextPath()+"/login.html");
+				res.sendRedirect(req.getContextPath()+"/login.jsp");
 			}
 		} else {
 			res.sendRedirect(req.getContextPath()+"/register.html");

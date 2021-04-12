@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<jsp:useBean id="shopItemsBean" class="utils.beans.CartItemsBean"></jsp:useBean>
+	<jsp:useBean id="shopItemsBean" class="utils.beans.ShopItemsBean"></jsp:useBean>
 	<form action="shop/shop1" method="POST">
 		<table>
 			<tr>
