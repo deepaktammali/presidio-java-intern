@@ -20,6 +20,9 @@ public class AddToCartAction implements Action {
 				res.sendRedirect(req.getContextPath()+"/login.jsp");
 			}
 		
+			String shop = req.getPathInfo().replace("/", "");
+			System.out.println(shop);
+			
 			HttpSession userSession = req.getSession();
 			Vector<String> cartItems = (Vector<String>) userSession.getAttribute("cart");
 			

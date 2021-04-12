@@ -185,7 +185,7 @@ public class Item extends ItemDataModel {
 	public static int deleteItemByID(Integer itemId) {
 		int i = 0;
 		Connection databaseConnection = DatabaseUtils.getDatabaseConnection();
-		String deleteItemString = "DELETE FROM customers WHERE id=?;";
+		String deleteItemString = "DELETE FROM items WHERE id=?;";
 		try (PreparedStatement deleteItem = databaseConnection
 				.prepareStatement(deleteItemString);) {
 			deleteItem.setInt(1, itemId);

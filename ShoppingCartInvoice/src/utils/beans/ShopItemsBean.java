@@ -1,7 +1,6 @@
 package utils.beans;
 
 import java.util.ArrayList;
-
 import utils.database.Item;
 
 public class ShopItemsBean {

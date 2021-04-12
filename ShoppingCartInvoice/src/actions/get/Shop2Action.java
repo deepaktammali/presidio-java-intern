@@ -10,7 +10,7 @@ public class Shop2Action implements Action {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		res.sendRedirect(req.getContextPath()+"/shop2.html");
+		res.sendRedirect(req.getContextPath()+"/shop2.jsp");
 	}
 
 }
