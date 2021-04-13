@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="utils.database.baseclass.*" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Welcome to shop market</title>
-</head>
-<body>
+
+	<jsp:include page="navbar.jsp">
+		<jsp:param value="HomePage" name="pageTitle"/>
+	</jsp:include>
 	<%
 		UserModel currUser = (UserModel)session.getAttribute("currUser");
 		if(currUser!=null){

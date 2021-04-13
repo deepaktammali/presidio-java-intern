@@ -1,15 +1,12 @@
-<%@page import="java.util.Locale"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <jsp:include page="navbar.jsp">
-	<jsp:param value="Login Page" name="pageTitle" />
+	<jsp:param value="Register Page" name="pageTitle" />
 </jsp:include>
 
-
 <form class="ui form" style="width: max(60vw, 30rem); margin: auto"
-	method="POST" action="login">
-	<input type="hidden" name="action" value="postLogin" />
+	method="POST" action="register">
+	<input type="hidden" name="action" value="postRegister"/>
 	<div class="field">
 		<label>Username</label> <input type="text" name="username" required
 			placeholder="Username">
@@ -18,7 +15,7 @@
 		<label>Password</label> <input type="text" name="password" required
 			placeholder="Password">
 	</div>
-	<button class="ui button" type="submit">Login</button>
+	<button class="ui button" type="submit">Register</button>
 </form>
 
 </body>

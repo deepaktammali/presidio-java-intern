@@ -9,7 +9,7 @@ public class HomePageAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		res.sendRedirect(req.getContextPath()+"/index.jsp");
+		res.sendRedirect(req.getContextPath()+"/shop1.jsp");
 	}
 
 }

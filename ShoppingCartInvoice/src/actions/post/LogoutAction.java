@@ -18,7 +18,7 @@ public class LogoutAction implements Action {
 		HttpSession userSession  = req.getSession();
 		if(AuthHelper.isUserAuthenticated(req)) {
 			userSession.invalidate();
-			res.sendRedirect(req.getContextPath()+"/index.jsp");
+			res.sendRedirect(req.getContextPath()+"/shop1.jsp");
 		}
 		else {
 			res.sendRedirect(req.getContextPath() + "/login.jsp");

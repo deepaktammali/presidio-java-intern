@@ -25,12 +25,12 @@ public class LoginAction implements Action {
 			if (queryUser.getPassword().equals(password)) {
 				userSession.setAttribute("isLoggedIn", true);
 				userSession.setAttribute("currUser", queryUser);
-				res.sendRedirect(req.getContextPath()+"/index.jsp");
+				res.sendRedirect(req.getContextPath()+"/shop1.jsp");
 			} else {
 				res.sendRedirect(req.getContextPath()+"/login.jsp");
 			}
 		} else {
-			res.sendRedirect(req.getContextPath()+"/register.html");
+			res.sendRedirect(req.getContextPath()+"/register.jsp");
 		}
 
 	}

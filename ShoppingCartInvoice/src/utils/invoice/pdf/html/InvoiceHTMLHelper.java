@@ -159,15 +159,3 @@ public class InvoiceHTMLHelper {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-

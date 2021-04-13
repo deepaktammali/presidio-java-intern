@@ -9,10 +9,10 @@ public class CartAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		if(!AuthHelper.isUserAuthenticated(req)) {
-			res.sendRedirect(req.getContextPath()+"/login.html");
-			return;
-		}
+//		if(!AuthHelper.isUserAuthenticated(req)) {
+//			res.sendRedirect(req.getContextPath()+"/login.jsp");
+//			return;
+//		}
 		
 		res.sendRedirect(req.getContextPath()+"/cart.jsp");
 	}

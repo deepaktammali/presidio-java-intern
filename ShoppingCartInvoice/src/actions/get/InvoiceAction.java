@@ -24,10 +24,13 @@ public class InvoiceAction implements Action {
 	
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		
 		if(!AuthHelper.isUserAuthenticated(req)) {
 			res.sendRedirect(req.getContextPath()+"/login.jsp");
 			return;
 		}
+		
+
 		Properties serverProperties = (Properties) req.getServletContext().getAttribute("serverConfig");
 		String cssFilePath = req.getServletContext().getRealPath(serverProperties.getProperty("cssPath"));
 		
@@ -36,15 +39,11 @@ public class InvoiceAction implements Action {
 		ServletContext servletContext = req.getServletContext();
 		
 		
-		Vector<String> cartItemNames = (Vector<String>)req.getSession().getAttribute("cart");
-		Vector<ItemDataModel> cartItems = new Vector<ItemDataModel>();
-		for (String itemName : cartItemNames) {
-			ItemDataModel cartItem = Item.findByName(itemName);
-			
-			if(cartItem==null) {
-				continue;
-			}
-			cartItems.add(cartItem);
+		Vector<ItemDataModel> cartItems = (Vector<ItemDataModel>)req.getSession().getAttribute("cart");
+		
+		if(cartItems==null) {
+			res.sendRedirect(req.getContextPath()+"/shop1.jsp");
+			return;
 		}
 		
 		String invoiceHTML = InvoiceHTMLHelper.generateInvoiceHTML(cartItems,cssFilePath);
@@ -61,10 +60,6 @@ public class InvoiceAction implements Action {
 		res.setContentType("application/pdf");
     	res.getOutputStream().write(invoicePDFFile.readAllBytes());
     	}
-        System.out.println( "PDF Created!" );
-        
-//		write invoice generation logic
-//		res.sendRedirect(req.getContextPath()+"/cart.jsp");
 	}
 
 }
