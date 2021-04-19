@@ -1,5 +1,7 @@
 package resteasy_helloworld;
 
+import java.util.ArrayList;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -18,6 +20,17 @@ public class EmployeeResource {
 	@Path("/xml")
 	public Employee getEmployeeXMLWithPostData(@QueryParam("id") int id,@QueryParam("name") String name) {
 		return new Employee(name, id);
+	}
+	
+	@GET
+	@Produces("application/xml")
+	@Path("/list")
+	public ArrayList<Employee> getEmployeeXMLWithPostData() {
+		ArrayList<Employee> employees = new ArrayList<>(5);
+		employees.add(new Employee("a", 1));
+		employees.add(new Employee("b", 2));
+		employees.add(new Employee("c", 3));
+		return employees;
 	}
 	
 }
