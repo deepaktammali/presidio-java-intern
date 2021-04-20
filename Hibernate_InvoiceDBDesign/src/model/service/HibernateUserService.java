@@ -14,7 +14,7 @@ public class HibernateUserService {
 		UserModel user = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			user = findById(id);
+			user = findById(session,id);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -26,7 +26,7 @@ public class HibernateUserService {
 		UserModel user = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			user = findByUserName(username);
+			user = findByUserName(session,username);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);

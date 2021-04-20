@@ -15,7 +15,7 @@ public class HibernateItemService {
 		ItemDataModel item = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			item = findById(id);
+			item = findById(session,id);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -27,7 +27,7 @@ public class HibernateItemService {
 		ItemDataModel item = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			item = findByName(name);
+			item = findByName(session,name);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
