@@ -5,17 +5,17 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.query.*;
 
-import model.ItemDataModel;
-import model.UserModel;
+import model.Item;
+import model.User;
 import util.HibernateUtil;
 
 public class HibernateItemService {
 
-	public static ItemDataModel findById(int id) {
-		ItemDataModel item = null;
+	public static Item findById(int id) {
+		Item item = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			item = findById(session,id);
+			item = findById(session, id);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -23,11 +23,11 @@ public class HibernateItemService {
 		return item;
 	}
 
-	public static ItemDataModel findByName(String name) {
-		ItemDataModel item = null;
+	public static Item findByName(String name) {
+		Item item = null;
 		try {
 			Session session = HibernateUtil.getSession();
-			item = findByName(session,name);
+			item = findByName(session, name);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -35,8 +35,8 @@ public class HibernateItemService {
 		return item;
 	}
 
-	public static List<ItemDataModel> findAll() {
-		List<ItemDataModel> items = null;
+	public static List<Item> findAll() {
+		List<Item> items = null;
 		try {
 			Session session = HibernateUtil.getSession();
 			items = findAll(session);
@@ -47,10 +47,10 @@ public class HibernateItemService {
 		return items;
 	}
 
-	public static ItemDataModel insert(ItemDataModel item) {
+	public static Item insert(Item item) {
 		try {
 			Session session = HibernateUtil.getSession();
-			item = insert(session,item);
+			item = insert(session, item);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -58,7 +58,7 @@ public class HibernateItemService {
 		return item;
 	}
 
-	public static ItemDataModel update(ItemDataModel item) throws Exception {
+	public static Item update(Item item) throws Exception {
 		try {
 			Session session = HibernateUtil.getSession();
 			item = update(session, item);
@@ -72,7 +72,7 @@ public class HibernateItemService {
 	public static void deleteById(int id) {
 		try {
 			Session session = HibernateUtil.getSession();
-			deleteById(session,id);
+			deleteById(session, id);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -82,44 +82,44 @@ public class HibernateItemService {
 	public static void deleteByName(String name) {
 		try {
 			Session session = HibernateUtil.getSession();
-			deleteByName(session,name);
+			deleteByName(session, name);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
 		}
 	}
-	
+
 //	functions with session param
 
-	private static ItemDataModel findById(Session session, int id) {
-		ItemDataModel item = null;
-		Query<ItemDataModel> query = session.createQuery("from Item i " + "where i.id=:id", ItemDataModel.class);
+	private static Item findById(Session session, int id) {
+		Item item = null;
+		Query<Item> query = session.createQuery("from Item i " + "where i.id=:id", Item.class);
 		query.setParameter("id", id);
 		item = query.uniqueResult();
 		return item;
 	}
 
-	private static ItemDataModel findByName(Session session, String name) {
-		ItemDataModel item = null;
-		Query<ItemDataModel> query = session.createQuery("from Item i " + "where i.name:name", ItemDataModel.class);
+	private static Item findByName(Session session, String name) {
+		Item item = null;
+		Query<Item> query = session.createQuery("from Item i " + "where i.name:name", Item.class);
 		query.setParameter("name", name);
 		item = query.uniqueResult();
 		return item;
 	}
 
-	private static List<ItemDataModel> findAll(Session session) {
-		List<ItemDataModel> items = null;
-		items = session.createQuery("from Item", ItemDataModel.class).list();
+	private static List<Item> findAll(Session session) {
+		List<Item> items = null;
+		items = session.createQuery("from Item", Item.class).list();
 		return items;
 	}
 
-	private static ItemDataModel insert(Session session, ItemDataModel item) {
+	private static Item insert(Session session, Item item) {
 		session.save(item);
 		return item;
 	}
 
-	public static ItemDataModel update(Session session, ItemDataModel item) throws Exception {
-		ItemDataModel queryItem;
+	public static Item update(Session session, Item item) throws Exception {
+		Item queryItem;
 		if (item.getId() != null) {
 			queryItem = findById(session, item.getId());
 		} else {
@@ -137,7 +137,7 @@ public class HibernateItemService {
 	}
 
 	private static void deleteById(Session session, int id) {
-		ItemDataModel item = findById(id);
+		Item item = findById(id);
 		if (item != null) {
 			session.delete(item);
 		}
@@ -145,7 +145,7 @@ public class HibernateItemService {
 
 	private static void deleteByName(Session session, String name) {
 
-		ItemDataModel item = findByName(name);
+		Item item = findByName(name);
 		if (item != null) {
 			session.delete(item);
 		}

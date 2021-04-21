@@ -10,11 +10,14 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
-		<property name="c3p0.timeout">10</property>
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property> 
-		
+		<mapping class="model.User"></mapping>
+		<mapping class="model.Item"></mapping>
+		<mapping class="model.Customer"></mapping>
+		<mapping class="model.Invoice"></mapping>
+		<mapping class="model.BillingItem"></mapping>
 	</session-factory>
 </hibernate-configuration>

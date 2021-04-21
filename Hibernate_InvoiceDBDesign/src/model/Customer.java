@@ -1,19 +1,32 @@
 package model;
 
-public abstract class CustomerDataModel {
-	protected Integer id;
-	protected String name;
-	protected String mobileNumber;
-	protected String address;
+import javax.persistence.*;
+
+@Entity
+@Table(name="Customer")
+public class Customer {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	Integer id;
+	@Column
+	String name;
+	@Column
+	String mobileNumber;
+	@Column
+	String address;
 	
-	public CustomerDataModel(String name, String mobileNumber, String address) {
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Customer(String name, String mobileNumber, String address) {
 		this.id = null;
 		this.name = name;
 		this.mobileNumber = mobileNumber;
 		this.address = address;
 	}
 	
-	public CustomerDataModel(Integer id, String name, String mobileNumber, String address) {
+	public Customer(Integer id, String name, String mobileNumber, String address) {
 		this.id = id;
 		this.name = name;
 		this.mobileNumber = mobileNumber;

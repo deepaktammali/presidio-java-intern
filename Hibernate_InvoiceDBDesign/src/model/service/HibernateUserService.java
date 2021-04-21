@@ -1,17 +1,18 @@
 package model.service;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.*;
 
-import model.UserModel;
+import model.User;
 import util.HibernateUtil;
 
 public class HibernateUserService {
 
-	public static UserModel findById(int id) {
-		UserModel user = null;
+	public static User findById(int id) {
+		User user = null;
 		try {
 			Session session = HibernateUtil.getSession();
 			user = findById(session,id);
@@ -22,8 +23,8 @@ public class HibernateUserService {
 		return user;
 	}
 
-	public static UserModel findByUserName(String username) {
-		UserModel user = null;
+	public static User findByUserName(String username) {
+		User user = null;
 		try {
 			Session session = HibernateUtil.getSession();
 			user = findByUserName(session,username);
@@ -34,19 +35,21 @@ public class HibernateUserService {
 		return user;
 	}
 
-	public static List<UserModel> findAll() {
-		List<UserModel> users = null;
+	public static List<User> findAll() {
+		List<User> users = null;
 		try {
 			Session session = HibernateUtil.getSession();
 			users = findAll(session);
 			HibernateUtil.closeSession(null);
+			
 		} catch (Exception e) {
+			System.out.println(e);
 			HibernateUtil.closeSession(e);
 		}
 		return users;
 	}
 
-	public static UserModel insert(UserModel user) {
+	public static User insert(User user) {
 		try {
 			Session session = HibernateUtil.getSession();
 			user = insert(session, user);
@@ -57,10 +60,10 @@ public class HibernateUserService {
 		return user;
 	}
 
-	public static UserModel update(UserModel user) throws Exception {
+	public static User update(User user) throws Exception {
 		try {
 			Session session = HibernateUtil.getSession();
-			update(session, user);
+			user = update(session, user);
 			HibernateUtil.closeSession(null);
 		} catch (Exception e) {
 			HibernateUtil.closeSession(e);
@@ -90,35 +93,36 @@ public class HibernateUserService {
 
 //	functions with session param
 
-	private static UserModel findById(Session session, int id) {
-		UserModel user = null;
-		Query<UserModel> query = session.createQuery("from User u " + "where u.id=:id");
+	private static User findById(Session session, int id) {
+		User user = null;
+		Query<User> query = session.createQuery("from User u " + "where u.id=:id",User.class);
 		query.setParameter("id", id);
 		user = query.uniqueResult();
 		return user;
 	}
 
-	private static UserModel findByUserName(Session session, String username) {
-		UserModel user = null;
-		Query<UserModel> query = session.createQuery("from User u " + "where u.username=:username");
+	private static User findByUserName(Session session, String username) {
+		User user = null;
+		Query<User> query = session.createQuery("from User u " + "where u.username=:username",User.class);
 		query.setParameter("username", username);
 		user = query.uniqueResult();
 		return user;
 	}
 
-	private static List<UserModel> findAll(Session session) {
-		List<UserModel> users = null;
-		users = session.createQuery("from User", UserModel.class).list();
+	private static List<User> findAll(Session session) {
+		List<User> users = null;
+		users = session.createQuery("from User", User.class).list();
 		return users;
 	}
 
-	private static UserModel insert(Session session, UserModel user) {
+	private static User insert(Session session, User user) {
 		session.save(user);
 		return user;
 	}
 
-	private static UserModel update(Session session, UserModel user) throws Exception {
-		UserModel queryUser;
+	private static User update(Session session, User user) throws Exception {
+		
+		User queryUser=null;
 		if (user.getId() != null) {
 			queryUser = findById(session, user.getId());
 		} else {
@@ -128,6 +132,7 @@ public class HibernateUserService {
 		if (queryUser == null) {
 			throw new Exception("User doesnot exist");
 		}
+		
 		queryUser.setUsername(user.getUsername());
 		queryUser.setPassword(user.getPassword());
 		queryUser.setFlag(user.getFlag());
@@ -136,7 +141,7 @@ public class HibernateUserService {
 
 	private static void deleteById(Session session, int id) {
 
-		UserModel user = findById(session, id);
+		User user = findById(session, id);
 		if (user != null) {
 			session.delete(user);
 		}
@@ -144,7 +149,7 @@ public class HibernateUserService {
 	}
 
 	private static void deleteByUsername(Session session, String username) {
-		UserModel user = findByUserName(session, username);
+		User user = findByUserName(session, username);
 		if (user != null) {
 			session.delete(user);
 		}

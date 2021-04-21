@@ -9,25 +9,29 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "User")
-public abstract class UserModel {
+public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	Integer id;
 	@Column(nullable=false)
-	private String username;
+	String username;
 	@Column(nullable=false)
-	private String password;
+	String password;
 	@Column(nullable=false)
-	private String flag;
+	String flag;
 	
-	public UserModel(String username, String password, String flag) {
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public User(String username, String password, String flag) {
 		super();
 		this.id=null;
 		this.username = username;
 		this.password = password;
 		this.flag = flag;
 	}
-	public UserModel(Integer id, String username, String password, String flag) {
+	public User(Integer id, String username, String password, String flag) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -59,5 +63,10 @@ public abstract class UserModel {
 		this.flag = flag;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("Username:%s Password:%s \n ", username,password);
+	}
 	
 }
